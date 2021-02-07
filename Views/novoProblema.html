@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastra Problema</title>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js"></script>
+
+    <script type="text/javascript" src="../JS/env.js"></script>
+    <script type="text/javascript" src="../JS/perfilUsuario.js"></script>
+    <script src="../JS/login.js" type="text/javascript"></script> 
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/index.css'>
+</head>
+<body>  
+    <header>
+        <h1>Problemas em Campinas</h1>
+        <div class="center">
+            <nav>
+                <ul>
+                    <li><a href="../Views/novoProblema.html">Novo Problema</a></li>
+                    <li><a href="../Views/perfil.html">Problemas</a></li>
+                    <li><a href="../Views/login.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form id="cadastroProblema"> 
+        <table id="tabCadastro">
+            <h2>Novo Problema</h2>
+        <tr>
+            <td>Local:</td>
+            <td><input type="text" id="local" placeholder="Local do Problema"><p id="mensagemL"></p></td>
+        </tr> 
+        <tr>
+            <td>Descrição do Problema:</td>
+            <td><textarea id="descricao" rows="5" cols="33"  placeholder="Escreva a descrição..."></textarea> <p id="mensagemD"></p></td>
+        </tr>
+        <tr>
+            <td>Nome da Imagem:</td>
+            <td><input type="text" id="imgName" placeholder="Nome para a imagem"></td>
+
+        </tr>
+        <tr>
+            <td>Imagem do problema:</td>
+            <td><img id="imgPreview"></td>
+        </tr>
+        <tr>
+            <td></td>
+           <td><button type="submit" id="imgEscolher" onclick="escolherImg();return false;">Escolher Imagem</button></td>
+                 
+        </tr>
+        </table>
+        <button type="submit" id="enviarProblema" onclick="uploadImagem( event );">Enviar Problema</button></td> 
+    </form>
+
+
+    <footer>© 2020 Desenvolvido por: Caio Mota e Gabriel Makiuchi</footer>
+</body>
+</html>

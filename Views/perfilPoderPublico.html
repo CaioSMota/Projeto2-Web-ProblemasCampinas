@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil Poder Publico</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  
+    <script type="text/javascript" src="../JS/env.js"></script>
+    <script type="text/javascript" src="../JS/perfilPoderPublico.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/index.css'>
+
+</head>
+<body onload="listaProblemas( event );return false;">    
+    <header>
+        <h1>Problemas em Campinas</h1>
+        <div class="center">
+            <nav>
+                <ul>
+                    <li><a href="../Views/perfilPoderPublico.html">Problemas</a></li>
+                    <li><a href="../Views/login.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+
+    <table class="table">
+                <tr class="titulos">
+                    <td>ID</td>
+                    <td>Local</td>
+                    <td>Descrição</td>
+                    <td>Foto</td>
+                    <td>Status</td>
+                    <td>Resposta</td>
+                    <td>Editar</td>
+                    <td>Deletar</td>
+                </tr>
+                <tr>
+                    <tbody id="tbOrcamentoEnviado"></tbody>
+                </tr>
+            </table>   
+
+        
+      <section id="EditarDados">     
+    <form class="editar"> 
+        <table class="tabEditar">
+            <h2>Editar Problema</h2>
+        <tr>
+            
+            <td>ID:<input type="text" id="id" disabled=""></td>
+       
+            <td>Detalhes:
+            <textarea id="detalhes" rows="5" cols="33" disabled=""></textarea> </p></td>
+
+            <td>Status:
+            <select id="status">
+                <option value="Cadastrado">Cadastrado</option>
+                <option value="Em Andamento">Em andamento</option>
+                <option value="Concluido">Concluído</option></td>
+      
+            <td>Resposta:
+            <textarea id="resposta" rows="5" cols="33"  placeholder="Escreva a Respsota..."></textarea></td>
+           <td><button type="submit" id="enviarEdit" onclick="updateProblema(event);">Editar Problema</button></td>
+        </tr> 
+         </table>
+    </form>
+    </section>
+
+    <footer>© 2020 Desenvolvido por: Caio Mota e Gabriel Makiuchi</footer>
+</body>
+</html>

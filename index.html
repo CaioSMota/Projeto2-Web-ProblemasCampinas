@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problemas em Campinas</title>
+     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  
+    <script type="text/javascript" src="../JS/env.js"></script>
+    <script type="text/javascript" src="../JS/login.js"></script>
+	<link rel='stylesheet' type='text/css' media='screen' href='CSS/index.css'>
+</head>
+<body onload="listaTodosProblemas( event );return false;">	
+	<header>
+        <h1>Problemas em Campinas</h1>
+        <div class="center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Views/sobre.html">Sobre</a></li>
+                    <li><a href="Views/login.html">Login</a></li>
+                    <li><a href="Views/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <table id="tableIndex">
+                <tr class="titulos">
+                    <td>Local</td>
+                    <td>Descrição</td>
+                    <td>Resposta</td>
+                    <td>Status</td>
+                    <td>Foto</td>
+                </tr>
+                <tr>
+                    <tbody id="tbOrcamentoEnviado"></tbody>
+                </tr>
+            </table>   
+
+    <footer>© 2020 Desenvolvido por: Caio Mota e Gabriel Makiuchi</footer>
+</body>
+</html>

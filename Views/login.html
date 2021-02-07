@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/env.js" type="text/javascript"></script>
+    <script src="../JS/login.js" type="text/javascript"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/index.css'>
+	<title>Login</title>
+</head>
+<body>
+	<header>
+        <h1>Problemas em Campinas</h1>
+        <div class="center">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Views/sobre.html">Sobre</a></li>
+                    <li><a href="../Views/login.html">Login</a></li>
+                    <li><a href="../Views/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+	<form id="login"> 
+		<table id="tabLogin">
+			<h1>LOGIN</h1>
+		<tr>
+			<td>Usuario:</td>
+			<td><input type="text" id="emailAuth"></td>
+		</tr> 
+		<tr>
+			<td>Senha:</td>
+			<td><input type="password" id="senhaAuth"></td>
+		</tr>
+		</table>
+		<input type="submit" name="enviar" id="botao" onclick="authUser(event);return false;" value="Entrar" >
+
+		<a id="resetSenha" onclick="resetSenhaUser(event);return false;">Esqueci minha senha!</a>
+		<a id="cds" href="../Views/cadastrar.html">Criar uma conta</a>
+	</form>
+	
+
+	<footer>© 2020 Desenvolvido por: Caio Mota e Gabriel Makiuchi</footer>
+</body>
+</html>
